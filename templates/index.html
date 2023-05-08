@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Emotion classification</title>
+  </head>
+  <body>
+    <h1>Upload Audio File</h1>
+    <form method="POST" action="/predict" enctype="multipart/form-data">
+      <input type="file" name="file" accept="audio/*">
+      <br><br>
+      <input type="submit" value="Predict">
+    </form>
+  </body>
+  <body>
+    <h2>Performance</h2>
+    <img src="{{ url_for('static', filename='classification.png') }}" alt="Classification Report">
+    <img src="{{ url_for('static', filename='loss.png') }}" alt="Loss Plot">
+  </body>
+</html>
